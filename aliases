@@ -1,0 +1,13 @@
+#!/bin/bash
+
+alias clip="xclip -selection clipboard"
+
+clipfile() {
+  cat $1 | xclip -selection clipboard -i
+}
+
+git-sync() {
+  git checkout master && \
+  git pull upstream master && \
+  git push origin master
+ }
