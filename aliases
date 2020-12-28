@@ -7,7 +7,8 @@ clipfile() {
 }
 
 git-sync() {
-  git checkout master && \
+  (git checkout main || \
+  git checkout master) && \
   git pull upstream master && \
   git push origin master
  }
